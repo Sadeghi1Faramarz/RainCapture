@@ -8,7 +8,7 @@ public class CoinController : MonoBehaviour
     {
         transform.position += Vector3.down * fallSpeed * Time.deltaTime;
 
-        if (transform.position.y < -6f)
+        if (transform.position.y < -20f)
         {
             Destroy(gameObject);
         }

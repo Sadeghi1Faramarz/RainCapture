@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f782c560323e33408814b3bf1b8c092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 3
+  fallSpeed: 15
 --- !u!61 &165796444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fff72ab9ace894a83c4d2a0f5cd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
 --- !u!61 &427140555
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -937,6 +937,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 2132687838}
   - {fileID: 1717047884}
   - {fileID: 163444736}
-  - {fileID: 2132687838}
