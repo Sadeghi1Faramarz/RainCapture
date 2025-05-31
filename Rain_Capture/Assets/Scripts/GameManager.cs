@@ -1,20 +1,17 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-  
     public static GameManager instance;
 
-    public Text scoreText; 
     
+    public TextMeshProUGUI scoreText;
 
     private int score = 0;
 
-
     void Awake()
     {
-        
         if (instance == null)
         {
             instance = this;
@@ -23,7 +20,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
 
     void Start()
@@ -39,11 +35,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("Score: " + score);
     }
 
-    
     void UpdateScoreText()
     {
         if (scoreText != null)
         {
+        
             scoreText.text = "Score: " + score;
         }
         else
