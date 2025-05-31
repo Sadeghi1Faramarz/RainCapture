@@ -3,12 +3,14 @@ using UnityEngine;
 public class CoinController : MonoBehaviour
 {
     public float fallSpeed = 3f;
+    public int coinValue = 10; 
 
     void Update()
     {
-        transform.position += Vector3.down * fallSpeed * Time.deltaTime;
+        transform.position += Vector3.down * fallSpeed * Time.deltaTime; //
 
-        if (transform.position.y < -20f)
+    
+        if (transform.position.y < -6f)
         {
             Destroy(gameObject);
         }
@@ -18,8 +20,20 @@ public class CoinController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Coin Catched");
-            Destroy(gameObject);
+        
+
+        
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.AddScore(coinValue);
+            }
+            else
+            {
+                Debug.LogError("GameManager Error!");
+            }
+        
+
+            Destroy(gameObject); //
         }
     }
 }
