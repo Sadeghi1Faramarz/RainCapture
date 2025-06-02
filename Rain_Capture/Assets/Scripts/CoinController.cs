@@ -3,15 +3,23 @@ using UnityEngine;
 public class CoinController : MonoBehaviour
 {
     public float fallSpeed = 3f;
-    public int coinValue = 10; 
+    public int coinValue = 10;
+    private float offScreenYBoundary = -6f;
 
     void Update()
     {
-        transform.position += Vector3.down * fallSpeed * Time.deltaTime; //
+        transform.position += Vector3.down * fallSpeed * Time.deltaTime;
 
-    
-        if (transform.position.y < -6f)
+        if (transform.position.y < offScreenYBoundary)
         {
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.SubtractScore(coinValue);
+            }
+            else
+            {
+                Debug.LogError("CoinController: GameManager instance not found! Score not subtracted for missed coin.");
+            }
             Destroy(gameObject);
         }
     }
@@ -20,20 +28,15 @@ public class CoinController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-        
-
-        
             if (GameManager.instance != null)
             {
                 GameManager.instance.AddScore(coinValue);
             }
             else
             {
-                Debug.LogError("GameManager Error!");
+                Debug.LogError("CoinController: GameManager instance not found! Score not added for collected coin.");
             }
-        
-
-            Destroy(gameObject); //
+            Destroy(gameObject);
         }
     }
 }

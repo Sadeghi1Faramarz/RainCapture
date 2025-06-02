@@ -29,7 +29,18 @@ public class GameManager : MonoBehaviour
     {
         score += pointsToAdd;
         UpdateScoreText();
-        Debug.Log("Score: " + score);
+        Debug.Log("Score: " + score + " (+" + pointsToAdd + ")");
+    }
+
+    public void SubtractScore(int pointsToSubtract)
+    {
+        score -= pointsToSubtract;
+        // if (score < 0)
+        // {
+        //     score = 0;
+        // }
+        UpdateScoreText();
+        Debug.Log("Score: " + score + " (-" + pointsToSubtract + ")");
     }
 
     void UpdateScoreText()
@@ -40,7 +51,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("unable to show score");
+            Debug.LogWarning("ScoreText UI element not assigned in GameManager.");
         }
     }
 }
