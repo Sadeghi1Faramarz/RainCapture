@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fff72ab9ace894a83c4d2a0f5cd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 1000
 --- !u!61 &427140555
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -849,7 +849,7 @@ Transform:
   m_GameObject: {fileID: 812950468}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 967, y: 770, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1178,14 +1178,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 163444736}
     m_Modifications:
     - target: {fileID: 1678861369653404974, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6.644691
-      objectReference: {fileID: 0}
-    - target: {fileID: 1678861369653404974, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6.6800513
-      objectReference: {fileID: 0}
-    - target: {fileID: 1678861369653404974, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1011
       objectReference: {fileID: 0}
@@ -1228,10 +1220,6 @@ PrefabInstance:
     - target: {fileID: 3731477177511961319, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
       propertyPath: m_Name
       value: Coin
-      objectReference: {fileID: 0}
-    - target: {fileID: 5846852554374780468, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
-      propertyPath: fallSpeed
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
