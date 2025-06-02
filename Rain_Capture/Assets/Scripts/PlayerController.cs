@@ -1,27 +1,48 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float speed = 1000f;
-    private float screenBoundary;
+    private float screenBoundaryLeft;
+    private float screenBoundaryRight;
+    private float playerHalfWidth;
 
-    private void Start()
+    void Start()
     {
-    
-        float halfWidth = GetComponent<SpriteRenderer>().bounds.extents.x;
-        screenBoundary = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x - halfWidth;
+        if (Camera.main == null)
+        {
+            enabled = false;
+            return;
+        }
+
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            playerHalfWidth = spriteRenderer.bounds.extents.x;
+        }
+        else
+        {
+            playerHalfWidth = 0.5f;
+        }
+
+        float screenAspect = (float)Screen.width / Screen.height;
+        float cameraHeight = Camera.main.orthographicSize * 2;
+        float cameraWidth = cameraHeight * screenAspect;
+
+        screenBoundaryLeft = Camera.main.transform.position.x - (cameraWidth / 2) + playerHalfWidth;
+        screenBoundaryRight = Camera.main.transform.position.x + (cameraWidth / 2) - playerHalfWidth;
     }
 
-    private void Update()
+    void Update()
     {
-    
-        float move = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        if (Camera.main == null) return;
 
-    
-        transform.Translate(move, 0, 0);
+        float horizontalInput = Input.GetAxis("Horizontal");
+        Vector3 movement = new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
+        transform.Translate(movement);
 
-    
-        float clampedX = Mathf.Clamp(transform.position.x, -screenBoundary, screenBoundary);
-        transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
+        Vector3 currentPosition = transform.position;
+        currentPosition.x = Mathf.Clamp(currentPosition.x, screenBoundaryLeft, screenBoundaryRight);
+        transform.position = currentPosition;
     }
 }
