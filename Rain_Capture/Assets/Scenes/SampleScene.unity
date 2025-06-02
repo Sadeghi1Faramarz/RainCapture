@@ -272,8 +272,8 @@ Transform:
   m_GameObject: {fileID: 427140551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.49, y: -5.23, z: 0}
-  m_LocalScale: {x: 2.326016, y: 2.0719507, z: 1}
+  m_LocalPosition: {x: 396, y: 158, z: 0}
+  m_LocalScale: {x: 61.713673, y: 64.25858, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1717047884}
@@ -499,7 +499,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -525,7 +525,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 17.4
+  orthographic size: 535
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -550,8 +550,8 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 961, y: 537, z: -10}
+  m_LocalScale: {x: 9.288835, y: 9.679944, z: 4.8888607}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -666,7 +666,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686552583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -674,8 +674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -979.395, y: -527.335}
-  m_SizeDelta: {x: 19.7119, y: 5.778}
+  m_AnchoredPosition: {x: -704, y: 375}
+  m_SizeDelta: {x: 480.0714, y: 123.5459}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686552585
 MonoBehaviour:
@@ -724,8 +724,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -950,12 +950,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.51
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -971,9 +971,9 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -982,7 +982,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1100008051
 RectTransform:
@@ -1074,7 +1074,7 @@ Transform:
   m_GameObject: {fileID: 1717047883}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -2.858, z: 0}
+  m_LocalPosition: {x: 589.9, y: 146.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1107,8 +1107,8 @@ Transform:
   m_GameObject: {fileID: 2132687837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.2, z: -0.012527999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 955.3809, y: 540.5648, z: -0.012527999}
+  m_LocalScale: {x: 30.252815, y: 30.793503, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 13927243}
@@ -1178,12 +1178,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 163444736}
     m_Modifications:
     - target: {fileID: 1678861369653404974, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.644691
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678861369653404974, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.6800513
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678861369653404974, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.94
+      value: 1011
       objectReference: {fileID: 0}
     - target: {fileID: 1678861369653404974, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.18
+      value: 1006
       objectReference: {fileID: 0}
     - target: {fileID: 1678861369653404974, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1220,6 +1228,10 @@ PrefabInstance:
     - target: {fileID: 3731477177511961319, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
       propertyPath: m_Name
       value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846852554374780468, guid: c387782830cf8104e9beb943bd2cc899, type: 3}
+      propertyPath: fallSpeed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
