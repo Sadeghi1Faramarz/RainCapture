@@ -10,8 +10,7 @@ public class GameManager : MonoBehaviour
 
     public static bool isGameOver = false;
 
-    [Header("Game Win UI")]
-    public GameObject winImageObject;
+    public GameObject winScreenPanel; 
 
     void Awake()
     {
@@ -28,14 +27,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         isGameOver = false;
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; 
 
-        if (winImageObject != null)
+        if (winScreenPanel != null)
         {
-            winImageObject.SetActive(false);
+            winScreenPanel.SetActive(false); 
         }
 
-        score = 50;
+        score = 50; 
         UpdateScoreText();
     }
 
@@ -49,7 +48,7 @@ public class GameManager : MonoBehaviour
             score = 100;
         }
         UpdateScoreText();
-
+        Debug.Log("Score: " + score + " (+" + pointsToAdd + ")");
 
         if (score >= 100)
         {
@@ -67,15 +66,17 @@ public class GameManager : MonoBehaviour
             score = 0;
         }
         UpdateScoreText();
+        Debug.Log("Score: " + score + " (-" + pointsToSubtract + ")");
     }
 
     void EndGameWin()
     {
         isGameOver = true;
+        Debug.Log("You Win");
 
-        if (winImageObject != null)
+        if (winScreenPanel != null)
         {
-            winImageObject.SetActive(true);
+            winScreenPanel.SetActive(true); 
         }
 
         Time.timeScale = 0f;
@@ -89,7 +90,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-
+        
         }
     }
 }
