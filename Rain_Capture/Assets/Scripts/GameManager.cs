@@ -28,6 +28,10 @@ public class GameManager : MonoBehaviour
     public void AddScore(int pointsToAdd)
     {
         score += pointsToAdd;
+        if (score > 100)
+        {
+            score = 100;
+        }
         UpdateScoreText();
         Debug.Log("Score: " + score + " (+" + pointsToAdd + ")");
     }
@@ -35,10 +39,10 @@ public class GameManager : MonoBehaviour
     public void SubtractScore(int pointsToSubtract)
     {
         score -= pointsToSubtract;
-        // if (score < 0)
-        // {
-        //     score = 0;
-        // }
+        if (score < 0)
+        {
+            score = 0;
+        }
         UpdateScoreText();
         Debug.Log("Score: " + score + " (-" + pointsToSubtract + ")");
     }
@@ -51,7 +55,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("ScoreText UI element not assigned in GameManager.");
+            Debug.LogWarning("unable to show score");
         }
     }
 }

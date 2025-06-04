@@ -25,12 +25,11 @@ public class PlayerController : MonoBehaviour
             playerHalfWidth = 0.5f;
         }
 
-        float screenAspect = (float)Screen.width / Screen.height;
-        float cameraHeight = Camera.main.orthographicSize * 2;
-        float cameraWidth = cameraHeight * screenAspect;
+        Vector3 leftEdgeScreenPoint = new Vector3(0, Screen.height / 2, Camera.main.transform.position.z - transform.position.z);
+        screenBoundaryLeft = Camera.main.ScreenToWorldPoint(leftEdgeScreenPoint).x + playerHalfWidth;
 
-        screenBoundaryLeft = Camera.main.transform.position.x - (cameraWidth / 2) + playerHalfWidth;
-        screenBoundaryRight = Camera.main.transform.position.x + (cameraWidth / 2) - playerHalfWidth;
+        Vector3 rightEdgeScreenPoint = new Vector3(Screen.width, Screen.height / 2, Camera.main.transform.position.z - transform.position.z);
+        screenBoundaryRight = Camera.main.ScreenToWorldPoint(rightEdgeScreenPoint).x - playerHalfWidth;
     }
 
     void Update()
@@ -39,10 +38,9 @@ public class PlayerController : MonoBehaviour
 
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector3 movement = new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
-        transform.Translate(movement);
-
-        Vector3 currentPosition = transform.position;
-        currentPosition.x = Mathf.Clamp(currentPosition.x, screenBoundaryLeft, screenBoundaryRight);
-        transform.position = currentPosition;
+        
+        Vector3 newPosition = transform.position + movement;
+        newPosition.x = Mathf.Clamp(newPosition.x, screenBoundaryLeft, screenBoundaryRight);
+        transform.position = newPosition;
     }
 }
